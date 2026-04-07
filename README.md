@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # classification-model-benchmarking
 =======
 In this assignment, classification algorithms were applied on two Kaggle datasets:
@@ -15,4 +14,4 @@ The following classification algorithms were used:
 
 The performance of all models was evaluated using accuracy score, confusion matrix, and classification report.
 This assignment helped in understanding how different classification algorithms perform on different datasets.
->>>>>>> 4a2e599 (Initial project upload)
+
