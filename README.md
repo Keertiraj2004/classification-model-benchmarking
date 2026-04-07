@@ -1,76 +1,98 @@
-# Classification Model Benchmarking using Machine Learning
+<div align="center">
+
+# 🤖 Classification Model Benchmarking
+
+### A comparative study of supervised ML classification algorithms across real-world datasets
+
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-green?style=flat-square&logo=scikit-learn)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?style=flat-square&logo=jupyter)
+![Algorithms](https://img.shields.io/badge/Algorithms-6-purple?style=flat-square)
+![Datasets](https://img.shields.io/badge/Datasets-2-teal?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-red?style=flat-square)
+
+</div>
+
+---
 
 ## 📌 Project Overview
-This project focuses on the **implementation and comparison of multiple supervised machine learning classification algorithms** on two popular Kaggle datasets:
 
-- **Titanic Dataset**
-- **Diabetes Dataset**
+This project implements and compares **6 supervised machine learning classification algorithms** on two well-known datasets — **Titanic** and **Diabetes** — covering the complete ML workflow from preprocessing to evaluation.
 
-The main objective of this project is to analyze how different classification algorithms perform on different datasets and evaluate them using standard machine learning metrics.
-
-This project demonstrates the complete machine learning workflow including:
-
-- Data loading
-- Data preprocessing
-- Feature transformation
-- Model training
-- Performance evaluation
-- Comparative analysis of classification algorithms
+| | Detail |
+|---|---|
+| 📂 Datasets | Titanic (survival prediction) · Diabetes (diagnosis prediction) |
+| 🛠️ Algorithms | 6 classifiers benchmarked |
+| 📊 Metrics | Accuracy, Confusion Matrix, F1-Score |
+| ✂️ Split | 80% train / 20% test |
 
 ---
 
 ## 🎯 Objectives
-- To apply machine learning classification algorithms on real-world datasets
-- To preprocess and prepare datasets for model training
-- To compare the performance of multiple classification models
-- To evaluate models using standard performance metrics
-- To identify the best-performing model for each dataset
+
+- Apply multiple classification algorithms on real-world datasets
+- Preprocess and prepare data for model training
+- Compare model performance using standard evaluation metrics
+- Identify the best-performing model for each dataset
 
 ---
 
-## 📂 Datasets Used
+## 📂 Datasets
 
-### 1️⃣ Titanic Dataset
-The Titanic dataset is used to predict whether a passenger survived or not based on features such as:
+### 🚢 Titanic Dataset
+Binary classification: *did the passenger survive?*
 
-- Age
-- Sex
-- Fare
-- Passenger Class
-- Embarked Port
-- Family Information
+**Features used:** Age · Sex · Fare · Passenger Class · Embarked Port · Family Information
 
-### 2️⃣ Diabetes Dataset
-The Diabetes dataset is used to predict whether a patient is likely to have diabetes based on medical attributes such as:
-
-- Glucose
-- Blood Pressure
-- Insulin
-- BMI
-- Age
-- Pregnancies
+**Preprocessing applied:**
+- Filled missing values in `Age`, `Embarked`, `Fare`
+- Dropped: `PassengerId`, `Name`, `Ticket`, `Cabin`
+- Encoded: `Sex`, `Embarked`
 
 ---
 
-## 🛠️ Machine Learning Algorithms Used
-The following classification algorithms were implemented and compared:
+### 💉 Diabetes Dataset
+Binary classification: *does the patient have diabetes?*
 
-- **Logistic Regression**
-- **Support Vector Machine (SVM)**
-- **Random Forest Classifier**
-- **Naive Bayes**
-- **K-Nearest Neighbors (KNN)**
-- **Decision Tree Classifier**
+**Features used:** Glucose · Blood Pressure · Insulin · BMI · Age · Pregnancies
 
 ---
 
-## ⚙️ Technologies & Libraries Used
+## 🛠️ Algorithms Benchmarked
 
-- **Python**
-- **Jupyter Notebook / JupyterLab**
-- **Pandas**
-- **NumPy**
-- **Scikit-learn**
+| # | Algorithm | Scaling Required |
+|---|---|---|
+| 1 | Logistic Regression | ✅ Yes |
+| 2 | Support Vector Machine (SVM) | ✅ Yes |
+| 3 | Random Forest Classifier | ❌ No |
+| 4 | Naive Bayes | ✅ Yes |
+| 5 | K-Nearest Neighbors (KNN) | ✅ Yes |
+| 6 | Decision Tree Classifier | ❌ No |
+
+> `StandardScaler` applied for algorithms that require normalized input.
+
+---
+
+## ⚙️ Workflow
+
+```
+1. Data Loading        → Load datasets via Pandas
+2. Preprocessing       → Impute, drop, encode features
+3. Feature Scaling     → StandardScaler for sensitive algorithms
+4. Train/Test Split    → 80/20 split
+5. Model Training      → Train all 6 classifiers
+6. Evaluation          → Accuracy, Confusion Matrix, Classification Report
+```
+
+---
+
+## 📊 Evaluation Metrics
+
+| Metric | Description |
+|---|---|
+| **Accuracy Score** | Percentage of correct predictions |
+| **Confusion Matrix** | TP, TN, FP, FN breakdown per class |
+| **Classification Report** | Precision, Recall, F1-Score per class |
 
 ---
 
@@ -96,149 +118,89 @@ classification-model-benchmarking/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-🔍 Project Workflow
-1️⃣ Data Loading
+```
 
-Both datasets are loaded using Pandas.
+---
 
-2️⃣ Data Preprocessing
-Titanic Dataset Preprocessing:
-Filled missing values in:
-Age
-Embarked
-Fare
-Dropped unnecessary columns:
-PassengerId
-Name
-Ticket
-Cabin
-Encoded categorical columns:
-Sex
-Embarked
-Diabetes Dataset Preprocessing:
-Loaded and prepared the dataset for classification
-Selected features and target variable
-3️⃣ Feature Scaling
+## ▶️ Getting Started
 
-Applied StandardScaler for algorithms that require normalized input:
-
-Logistic Regression
-SVM
-Naive Bayes
-KNN
-4️⃣ Train-Test Split
-
-Both datasets were split into:
-
-80% Training Data
-20% Testing Data
-5️⃣ Model Training
-
-Each classification model was trained separately on both datasets.
-
-6️⃣ Model Evaluation
-
-The performance of each model was evaluated using:
-
-Accuracy Score
-Confusion Matrix
-Classification Report
-📊 Evaluation Metrics
-✅ Accuracy Score
-
-Measures the percentage of correct predictions made by the model.
-
-✅ Confusion Matrix
-
-Shows the number of:
-
-True Positives
-True Negatives
-False Positives
-False Negatives
-✅ Classification Report
-
-Provides detailed metrics such as:
-
-Precision
-Recall
-F1-Score
-📈 Results
-
-The performance of all classification algorithms was compared on both datasets.
-
-Titanic Dataset
-
-A comparative accuracy table was generated for:
-
-Logistic Regression
-SVM
-Random Forest
-Naive Bayes
-KNN
-Decision Tree
-Diabetes Dataset
-
-A similar comparative accuracy analysis was performed for the Diabetes dataset.
-
-📸 Project Screenshots
-Titanic Dataset Accuracy Table
-
-Diabetes Dataset Accuracy Table
-
-▶️ How to Run This Project
-Step 1: Clone the Repository
-git clone https://github.com/your-username/classification-model-benchmarking.git
+### Step 1 — Clone the repository
+```bash
+git clone https://github.com/Keertiraj2004/classification-model-benchmarking.git
 cd classification-model-benchmarking
-Step 2: Install Required Libraries
+```
+
+### Step 2 — Install dependencies
+```bash
 pip install -r requirements.txt
-Step 3: Run the Jupyter Notebook
-jupyter notebook
+```
 
-Then open:
+### Step 3 — Run the notebook
+```bash
+jupyter notebook notebooks/classification_assignment.ipynb
+```
 
-notebooks/classification_assignment.ipynb
-
-OR run the Python script directly:
-
+Or run directly as a Python script:
+```bash
 python python_files/python_files.py
-📦 requirements.txt
+```
 
-The following libraries are required to run this project:
+---
 
+## 📦 Requirements
+
+```
 pandas
 numpy
 scikit-learn
 jupyterlab
 notebook
-💡 Key Learnings
+```
 
-This project helped in understanding:
+---
 
-How classification algorithms work
-The importance of preprocessing in machine learning
-How model performance varies across datasets
-How to evaluate classification models using different metrics
-How to structure a machine learning project for GitHub and portfolio use
-🚀 Future Improvements
+## 📈 Results
 
-This project can be improved further by adding:
+Performance of all 6 classifiers was compared on both datasets.
 
-Data visualization using Matplotlib and Seaborn
-Hyperparameter tuning using GridSearchCV
-Cross-validation for better reliability
-Feature importance analysis
-Model deployment using Streamlit or Flask
-More datasets for broader benchmarking
-🎓 Academic Relevance
+| Dataset | Screenshot |
+|---|---|
+| Titanic | `screenshots/Titanic_Accuracy_Table.png` |
+| Diabetes | `screenshots/Diabetes_Accuracy_Table.png` |
 
-This project was developed as part of a Machine Learning Classification Assignment to gain practical hands-on experience with supervised learning techniques.
+---
 
-👨‍💻 Author
+## 🚀 Planned Improvements
 
-Keertiraj
-Engineering Student | Aspiring Data Scientist | Machine Learning Enthusiast
+- [ ] Data visualization using Matplotlib and Seaborn
+- [ ] Hyperparameter tuning with GridSearchCV
+- [ ] Cross-validation for better reliability
+- [ ] Feature importance analysis
+- [ ] Model deployment with Streamlit or Flask
+- [ ] Broader multi-dataset benchmarking
 
-Connect with me:
-GitHub: https://github.com/Keertiraj2004
-LinkedIn: www.linkedin.com/in/keertiraj-kamble
+---
+
+## 💡 Key Learnings
+
+- How classification algorithms work under the hood
+- The critical role of preprocessing in ML pipelines
+- How model performance varies across different domains
+- How to evaluate models using multiple metrics
+- How to structure an ML project for GitHub and portfolio use
+
+---
+
+## 👨‍💻 Author
+
+**Keertiraj Kamble**
+Engineering Student · Aspiring Data Scientist · ML Enthusiast
+
+[![GitHub](https://img.shields.io/badge/GitHub-Keertiraj2004-black?style=flat-square&logo=github)](https://github.com/Keertiraj2004)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-keertiraj--kamble-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/keertiraj-kamble)
+
+---
+
+<div align="center">
+  <sub>Developed as part of a Machine Learning Classification Assignment · MIT License</sub>
+</div>
