@@ -32,7 +32,7 @@ It covers the full ML pipeline: data loading, preprocessing, feature scaling, mo
 
 ---
 
-## 🎯 Objectives
+## 🎯 Objective
 
 - Apply multiple classification algorithms on real-world datasets
 - Preprocess and prepare raw data for model training
