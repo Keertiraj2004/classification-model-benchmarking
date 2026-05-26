@@ -1,4 +1,4 @@
-<didiv align="center">
+<div align="center">
 
 # 🤖Classification Model Benchmarking
 
