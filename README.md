@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤖Classification Model Benchmarking
+# 🤖Classification model Benchmarking
 
 ### Comparing 6 supervised ML classifiers on Titanic & Diabetes datasets — from raw data to evaluated results.
 
