@@ -15,7 +15,7 @@
 
 ---       
 
-## 📌 Project Overview
+## 📌 Project Overview 
 
 This project implements and compares **6 supervised machine learning classification algorithms** on two real-world Kaggle datasets — **Titanic** (survival prediction) and **Diabetes** (diagnosis prediction).
 
