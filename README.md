@@ -75,7 +75,7 @@ Binary classification: *does the patient have diabetes?*
 | 5 | K-Nearest Neighbors | ✅ StandardScaler | `k=5` |
 | 6 | Decision Tree | ❌ Not required | `random_state=42` |
 
----
+---    
 
 ## 📊 Benchmark Results
 
