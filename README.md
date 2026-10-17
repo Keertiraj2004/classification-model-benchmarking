@@ -64,7 +64,7 @@ Binary classification: *does the patient have diabetes?*
 
 ---
 
-## 🛠️ Algorithms Benchmarked
+## 🛠️ Algorithms Benchmarked       
 
 | # | Algorithm | Feature Scaling | Notes |
 |---|---|---|---|
