@@ -53,7 +53,7 @@ Binary classification: *did the passenger survive?*
 - Dropped irrelevant columns: `PassengerId`, `Name`, `Ticket`, `Cabin`
 - Label-encoded: `Sex`, `Embarked`
 
----
+---      
 
 ### 💉 Diabetes Dataset
 Binary classification: *does the patient have diabetes?*
